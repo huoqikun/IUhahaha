@@ -14,6 +14,7 @@ class TestAppArticle:
         # 获取PageAppArticle对象
         self.article = self.page_in.page_get_PageAppArticle()
 
+
     # 结束
     def teardown_class(self):
         # 关闭driver
