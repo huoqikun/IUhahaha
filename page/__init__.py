@@ -12,6 +12,10 @@ url_mis = "http://ttmis.research.itcast.cn/#/"
 article_title = read_yaml("mp_article.yaml")[0][0]
 article_channel = "数据库"
 
+"""以下数据为app应用配置数据"""
+appPackage = "com.itcast.toutiaoApp"
+appActivity = ".MainActivity"
+
 """以下为自媒体配置数据"""
 # 手机号
 mp_phone = By.CSS_SELECTOR, "[placeholder='请输入手机号']"
