@@ -32,7 +32,7 @@ class TestMisAudit:
         self.audit.page_mis_audit(title, channel)
         try:
             # 断言
-            assert self.audit.page_assert_success(title="bj-test17-004", channel="数据库")
+            assert self.audit.page_assert_success(title="佩奇日记04", channel="数据库")
         except Exception as e:
             # 日志
             log.error(e)

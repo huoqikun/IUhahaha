@@ -1,0 +1,68 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1578737281179" stop="1578737349715">
+  <name>scripts</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1578737281179" status="failed" stop="1578737349715">
+      <name>test006_app_article.TestAppArticle.test_app_article</name>
+      <failure>
+        <message>TimeoutException: Message: 
+</message>
+        <stack-trace>self = &lt;scripts.test006_app_article.TestAppArticle object at 0x03BA1750&gt;
+
+    def test_app_article(self):
+        # 调用查找文章方法
+&gt;       self.article.page_app_article(find_text="python", title_text="python")
+
+scripts\test006_app_article.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+page\page_app_article.py:16: in page_app_article
+    self.page_find_article(title_text)
+page\page_app_article.py:11: in page_find_article
+    self.base_app_down_to_up(page.app_article_area, title_text)
+base\app_base.py:54: in base_app_down_to_up
+    el = self.base_find(area_loc)
+base\base.py:17: in base_find
+    return WebDriverWait(self.driver, timeout=timeout, poll_frequency=poll).until(lambda x: x.find_element(*loc))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="f34b9ad7-482c-496f-8481-36252d1096da")&gt;
+method = &lt;function Base.base_find.&lt;locals&gt;.&lt;lambda&gt; at 0x03B92CD8&gt;, message = ''
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+            return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() &gt; end_time:
+                break
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+c:\users\administrator\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException</stack-trace>
+      </failure>
+      <attachments>
+        <attachment source="e1bf75b2-2f0b-47ed-9bf5-c69680d3de7c-attachment.txt" title="Captured log setup" type="text/plain"/>
+        <attachment source="31616ae4-b83a-49c0-a403-a65e6048ebf4-attachment.txt" title="Captured log call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4796-MainThread"/>
+        <label name="host" value="PC201901071413E"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

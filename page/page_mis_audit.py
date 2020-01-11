@@ -70,8 +70,8 @@ class PageMisAudit(WebBase):
         # 输入频道
         self.page_input_channel(channel)
         # 点击状态
-        self.web_base_click_ul_li("请选择状态","审核通过")
+        self.web_base_click_ul_li("请选择状态", "审核通过")
         # 点击查询
         self.page_click_search_btn()
         sleep(3)
-        return self.web_base_element_exists(self.article_id) # 判断是否存在结果
+        return self.web_base_element_exists(self.article_id)
